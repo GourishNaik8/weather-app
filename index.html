@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+
+  <div class="blured" data-loader="">
+    <div class="loader">
+    </div>
+  </div>
+
+  <div data-weather class="hide">
+
+    <header class="my-header">
+      <div class="left-h">
+        <img class="main-icon" src="" data-current-icon />
+        <div class="current-temp">
+          <span data-current-temp>27</span>&deg;
+        </div>
+      </div>
+      <div class="right-h">
+        <div class="info-grp">
+          <div class="info-label">High</div>
+          <div class="info-label-sub"><span data-current-high>31</span>&deg;</div>
+        </div>
+        <div class="info-grp">
+          <div class="info-label">FL High</div>
+          <div class="info-label-sub"><span data-current-fl-high>31</span>&deg;</div>
+        </div>
+        <div class="info-grp">
+          <div class="info-label">wind</div>
+          <div class="info-label-sub"><span data-current-wind>9</span><span class="sub-info">mph</span></div>
+        </div>
+        <div class="info-grp">
+          <div class="info-label">low</div>
+          <div class="info-label-sub"><span data-current-low>31</span>&deg;</div>
+        </div>
+        <div class="info-grp">
+          <div class="info-label">fl low</div>
+          <div class="info-label-sub"><span data-current-fl-low>31</span>&deg;</div>
+        </div>
+        <div class="info-grp">
+          <div class="info-label">precip</div>
+          <div class="info-label-sub"><span data-current-precip>31</span><span class="sub-info">in</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="day-section" data-day-section>
+    </section>
+
+    <section class="table-container">
+      <table class="hours-section">
+        <tbody data-hour-section>
+        </tbody>
+      </table>
+    </section>
+
+    <template id="day-card-template">
+      <div class="day-card">
+        <img data-icon class="side-icon" />
+        <div class="day-card-day" data-day></div>
+        <div><span data-temp></span><span>&deg;</span></div>
+      </div>
+    </template>
+
+    <template id="hour-row-template">
+      <tr class="hour-row">
+        <td>
+          <div class="info-grp">
+            <div class="info-label" data-day></div>
+            <div data-time></div>
+          </div>
+        </td>
+        <td>
+          <img class="side-icon" data-icon />
+        </td>
+        <td>
+          <div class="info-grp">
+            <div class="info-label">Temp</div>
+            <div><span data-temp></span><span>&deg;</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-grp">
+            <div class="info-label">fl temp</div>
+            <div><span data-fl-temp></span><span>&deg;</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-grp">
+            <div class="info-label">wind</div>
+            <div class="info-label"><span data-wind></span><span class="sub-info">mph</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-grp">
+            <div class="info-label">precip</div>
+            <div class="info-label"><span data-percip></span><span class="sub-info">in</span></div>
+          </div>
+        </td>
+      </tr>
+    </template>
+
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
